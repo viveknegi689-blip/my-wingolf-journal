@@ -1,69 +1,209 @@
-import Image from "next/image";
+
+const events = [
+  {
+    number: "01",
+    category: "TRADITION & FELLOWSHIP",
+    title: "The Art of Gathering",
+    description:
+      "Celebrating friendship, tradition and the moments that bring us together.",
+    date: "A memory to be added",
+    location: "Hamburg, Germany",
+    symbol: "✦",
+  },
+  {
+    number: "02",
+    category: "STUDENT LIFE",
+    title: "Life Beyond the Lecture Hall",
+    description:
+      "The people, conversations and experiences that make student life memorable.",
+    date: "A memory to be added",
+    location: "Northern Germany",
+    symbol: "❧",
+  },
+  {
+    number: "03",
+    category: "PEOPLE & PLACES",
+    title: "A Journey of Friendships",
+    description:
+      "Collecting stories from the places visited and the people encountered.",
+    date: "A memory to be added",
+    location: "Across Germany",
+    symbol: "✧",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="journal">
+
+      {/* Navigation */}
+      <nav className="navbar">
+        <a href="#" className="brand">
+          <span className="brand-symbol">W</span>
+          <span>
+            <strong>MY WINGOLF JOURNAL</strong>
+            <small>A PERSONAL CHRONICLE</small>
+          </span>
+        </a>
+
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">My Story</a>
+          <a href="#journal">Journal</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+
+        <a href="#journal" className="nav-button">
+          EXPLORE JOURNAL ↗
+        </a>
+      </nav>
+
+      {/* Hero */}
+      <section className="hero" id="home">
+        <div className="hero-content">
+          <p className="eyebrow">
+            ✦ &nbsp; TRADITION · FRIENDSHIP · EXPERIENCE &nbsp; ✦
+          </p>
+
+          <h1>
+            Some moments
+            <br />
+            deserve to be
+            <br />
+            <em>remembered.</em>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <div className="gold-line" />
+
+          <p className="hero-description">
+            A personal collection of experiences, encounters
+            and memories from my journey through Wingolf,
+            university life and beyond.
+          </p>
+
+          <a href="#journal" className="hero-button">
+            DISCOVER THE JOURNAL <span>↗</span>
+          </a>
+        </div>
+
+        <div className="hero-decoration">
+          <span className="decoration-top">EST. 2026</span>
+          <div className="decoration-circle">
+            <span>W</span>
+          </div>
+          <span className="decoration-bottom">
+            MEMORIES & TRADITIONS
+          </span>
+        </div>
+
+        <div className="hero-bottom">
+          <span>HAMBURG · GERMANY</span>
+          <span>AN ONGOING COLLECTION</span>
+          <span>SCROLL TO EXPLORE ↓</span>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="intro-section" id="about">
+        <div className="section-label">01 — A PERSONAL CHRONICLE</div>
+
+        <div className="intro-grid">
+          <h2>
+            A life shaped by
+            <br />
+            <em>people and moments.</em>
+          </h2>
+
+          <div className="intro-text">
+            <p>
+              Welcome to my personal journal. A place where
+              I collect the experiences that make life
+              meaningful.
+            </p>
+            <p>
+              From traditional gatherings and student life
+              to travels, friendships and unexpected
+              adventures, every experience has a story
+              worth preserving.
+            </p>
+            <a href="#journal" className="text-link">
+              EXPLORE MY STORIES ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Journal */}
+      <section className="journal-section" id="journal">
+        <div className="section-label">02 — THE JOURNAL</div>
+
+        <div className="section-heading">
+          <div>
+            <h2>Stories & <em>Experiences.</em></h2>
+            <p>A collection of moments worth remembering.</p>
+          </div>
+          <span className="volume-label">VOLUME I · 2026</span>
+        </div>
+
+        <div className="event-grid">
+          {events.map((event) => (
+            <article className="event-card" key={event.number}>
+              <div className={`event-art art-${event.number}`}>
+                <span className="event-number">{event.number}</span>
+                <span className="event-symbol">{event.symbol}</span>
+                <span className="art-caption">
+                  MY WINGOLF JOURNAL
+                </span>
+              </div>
+
+              <div className="event-info">
+                <span className="event-category">
+                  {event.category}
+                </span>
+
+                <h3>{event.title}</h3>
+
+                <p>{event.description}</p>
+
+                <div className="event-meta">
+                  <span>{event.date}</span>
+                  <span>{event.location}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="gallery-section" id="gallery">
+        <div className="section-label">03 — THE GALLERY</div>
+
+        <div className="gallery-heading">
+          <h2>Moments in <em>frames.</em></h2>
+          <p>
+            Photographs, places and memories waiting to
+            find their place in this collection.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="gallery-placeholder">
+          <span>✧</span>
+          <h3>Every photograph tells a story.</h3>
+          <p>The gallery will grow with every new experience.</p>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-brand">My Wingolf Journal.</div>
+        <p>Traditions. Friendships. Memories.</p>
+        <div className="footer-bottom">
+          <span>PERSONAL CHRONICLE · HAMBURG</span>
+          <span>MADE WITH CARE © 2026</span>
+        </div>
+      </footer>
+
+    </main>
   );
 }
