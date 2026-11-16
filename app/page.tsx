@@ -2,32 +2,32 @@
 const events = [
   {
     number: "01",
-    category: "TRADITION & FELLOWSHIP",
-    title: "The Art of Gathering",
+    category: "TRADITION & GEMEINSCHAFT",
+    title: "Die Kunst des Miteinanders",
     description:
-      "Celebrating friendship, tradition and the moments that bring us together.",
-    date: "A memory to be added",
-    location: "Hamburg, Germany",
+      "Eine Würdigung der Freundschaft, der Traditionen und jener Augenblicke, die uns verbinden.",
+    date: "Eine Erinnerung folgt",
+    location: "Hamburg, Deutschland",
     symbol: "✦",
   },
   {
     number: "02",
-    category: "STUDENT LIFE",
-    title: "Life Beyond the Lecture Hall",
+    category: "STUDENTENLEBEN",
+    title: "Leben jenseits des Hörsaals",
     description:
-      "The people, conversations and experiences that make student life memorable.",
-    date: "A memory to be added",
-    location: "Northern Germany",
+      "Die Menschen, Gespräche und Erlebnisse, die das Studentenleben unvergesslich machen.",
+    date: "Eine Erinnerung folgt",
+    location: "Norddeutschland",
     symbol: "❧",
   },
   {
     number: "03",
-    category: "PEOPLE & PLACES",
-    title: "A Journey of Friendships",
+    category: "MENSCHEN & ORTE",
+    title: "Eine Reise voller Freundschaften",
     description:
-      "Collecting stories from the places visited and the people encountered.",
-    date: "A memory to be added",
-    location: "Across Germany",
+      "Geschichten von besonderen Orten, Begegnungen und Menschen, die meinen Weg begleiten.",
+    date: "Eine Erinnerung folgt",
+    location: "Quer durch Deutschland",
     symbol: "✧",
   },
 ];
@@ -41,20 +41,20 @@ export default function Home() {
         <a href="#" className="brand">
           <span className="brand-symbol">W</span>
           <span>
-            <strong>MY WINGOLF JOURNAL</strong>
-            <small>A PERSONAL CHRONICLE</small>
+            <strong>MEIN WINGOLF-TAGEBUCH</strong>
+            <small>EINE PERSÖNLICHE CHRONIK</small>
           </span>
         </a>
 
         <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">My Story</a>
-          <a href="#journal">Journal</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#home">Startseite</a>
+          <a href="#about">Über mich</a>
+          <a href="#journal">Chronik</a>
+          <a href="#gallery">Galerie</a>
         </div>
 
         <a href="#journal" className="nav-button">
-          EXPLORE JOURNAL ↗
+          CHRONIK ENTDECKEN ↗
         </a>
       </nav>
 
@@ -62,72 +62,73 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="hero-content">
           <p className="eyebrow">
-            ✦ &nbsp; TRADITION · FRIENDSHIP · EXPERIENCE &nbsp; ✦
+            ✦ &nbsp; TRADITION · FREUNDSCHAFT · ERLEBNISSE &nbsp; ✦
           </p>
 
           <h1>
-            Some moments
+            Manche Augenblicke
             <br />
-            deserve to be
+            verdienen es,
             <br />
-            <em>remembered.</em>
+            <em>unvergessen zu bleiben.</em>
           </h1>
 
           <div className="gold-line" />
 
           <p className="hero-description">
-            A personal collection of experiences, encounters
-            and memories from my journey through Wingolf,
-            university life and beyond.
+            Eine persönliche Sammlung von Erlebnissen,
+            Begegnungen und Erinnerungen aus meiner Zeit
+            im Wingolf, dem Studentenleben und darüber hinaus.
           </p>
 
           <a href="#journal" className="hero-button">
-            DISCOVER THE JOURNAL <span>↗</span>
+            DIE CHRONIK ENTDECKEN <span>↗</span>
           </a>
         </div>
 
         <div className="hero-decoration">
-          <span className="decoration-top">EST. 2026</span>
+          <span className="decoration-top">GEGR. 2026</span>
           <div className="decoration-circle">
             <span>W</span>
           </div>
           <span className="decoration-bottom">
-            MEMORIES & TRADITIONS
+            ERINNERUNGEN & TRADITIONEN
           </span>
         </div>
 
         <div className="hero-bottom">
-          <span>HAMBURG · GERMANY</span>
-          <span>AN ONGOING COLLECTION</span>
-          <span>SCROLL TO EXPLORE ↓</span>
+          <span>HAMBURG · DEUTSCHLAND</span>
+          <span>EINE FORTLAUFENDE CHRONIK</span>
+          <span>WEITERLESEN ↓</span>
         </div>
       </section>
 
       {/* Introduction */}
       <section className="intro-section" id="about">
-        <div className="section-label">01 — A PERSONAL CHRONICLE</div>
+        <div className="section-label">01 — EINE PERSÖNLICHE CHRONIK</div>
 
         <div className="intro-grid">
           <h2>
-            A life shaped by
+            Ein Leben geprägt von
             <br />
-            <em>people and moments.</em>
+            <em>Menschen und Momenten.</em>
           </h2>
 
           <div className="intro-text">
             <p>
-              Welcome to my personal journal. A place where
-              I collect the experiences that make life
-              meaningful.
+              Willkommen in meinem persönlichen Tagebuch.
+              Ein Ort, an dem ich die Erlebnisse festhalte,
+              die das Leben besonders machen.
             </p>
             <p>
-              From traditional gatherings and student life
-              to travels, friendships and unexpected
-              adventures, every experience has a story
-              worth preserving.
+              Von traditionellen Veranstaltungen und dem
+              Studentenleben über Reisen und Freundschaften
+              bis hin zu unerwarteten Abenteuern –
+              jedes Erlebnis erzählt eine eigene Geschichte,
+              die es wert ist, bewahrt zu werden.
             </p>
             <a href="#journal" className="text-link">
-              EXPLORE MY STORIES ↗
+              MEINE GESCHICHTEN ENTDECKEN ↗
             </a>
           </div>
         </div>
@@ -135,14 +136,14 @@ export default function Home() {
 
       {/* Journal */}
       <section className="journal-section" id="journal">
-        <div className="section-label">02 — THE JOURNAL</div>
+        <div className="section-label">02 — DIE CHRONIK</div>
 
         <div className="section-heading">
           <div>
-            <h2>Stories & <em>Experiences.</em></h2>
-            <p>A collection of moments worth remembering.</p>
+            <h2>Geschichten & <em>Erlebnisse.</em></h2>
+            <p>Eine Sammlung unvergesslicher Augenblicke.</p>
           </div>
-          <span className="volume-label">VOLUME I · 2026</span>
+          <span className="volume-label">BAND I · 2026</span>
         </div>
 
         <div className="event-grid">
@@ -152,7 +153,7 @@ export default function Home() {
                 <span className="event-number">{event.number}</span>
                 <span className="event-symbol">{event.symbol}</span>
                 <span className="art-caption">
-                  MY WINGOLF JOURNAL
+                  MEIN WINGOLF-TAGEBUCH
                 </span>
               </div>
 
@@ -177,30 +178,30 @@ export default function Home() {
 
       {/* Gallery */}
       <section className="gallery-section" id="gallery">
-        <div className="section-label">03 — THE GALLERY</div>
+        <div className="section-label">03 — DIE BILDERGALERIE</div>
 
         <div className="gallery-heading">
-          <h2>Moments in <em>frames.</em></h2>
+          <h2>Augenblicke in <em>Bildern.</em></h2>
           <p>
-            Photographs, places and memories waiting to
-            find their place in this collection.
+            Fotografien, Orte und Erinnerungen,
+            die ihren Platz in dieser Sammlung finden werden.
           </p>
         </div>
 
         <div className="gallery-placeholder">
           <span>✧</span>
-          <h3>Every photograph tells a story.</h3>
-          <p>The gallery will grow with every new experience.</p>
+          <h3>Jedes Bild erzählt eine Geschichte.</h3>
+          <p>Mit jedem neuen Erlebnis wächst diese Galerie.</p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-brand">My Wingolf Journal.</div>
-        <p>Traditions. Friendships. Memories.</p>
+        <div className="footer-brand">Mein Wingolf-Tagebuch.</div>
+        <p>Traditionen. Freundschaften. Erinnerungen.</p>
         <div className="footer-bottom">
-          <span>PERSONAL CHRONICLE · HAMBURG</span>
-          <span>MADE WITH CARE © 2026</span>
+          <span>PERSÖNLICHE CHRONIK · HAMBURG</span>
+          <span>MIT SORGFALT GESTALTET © 2026</span>
         </div>
       </footer>
 
